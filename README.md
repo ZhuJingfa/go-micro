@@ -273,11 +273,11 @@ Create a plugins.go file
 ```go
 import (
         // etcd v3 registry
-        _ "github.com/micro/go-plugins/registry/etcdv3"
+        _ "micro/go-plugins/registry/etcdv3"
         // nats transport
-        _ "github.com/micro/go-plugins/transport/nats"
+        _ "micro/go-plugins/transport/nats"
         // kafka broker
-        _ "github.com/micro/go-plugins/broker/kafka"
+        _ "micro/go-plugins/broker/kafka"
 )
 ```
 
