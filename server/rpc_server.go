@@ -9,14 +9,14 @@ import (
 	"sync"
 	"time"
 
-	"github.com/micro/go-log"
+	"micro/go-log"
 	"micro/go-micro/broker"
 	"micro/go-micro/codec"
 	"micro/go-micro/metadata"
 	"micro/go-micro/registry"
 	"micro/go-micro/transport"
 
-	"github.com/micro/misc/lib/addr"
+	"micro/misc/lib/addr"
 
 	"golang.org/x/net/context"
 )

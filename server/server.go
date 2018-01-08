@@ -6,7 +6,7 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/micro/go-log"
+	"micro/go-log"
 	"github.com/pborman/uuid"
 	"golang.org/x/net/context"
 )

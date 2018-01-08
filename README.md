@@ -128,7 +128,7 @@ import (
 	"fmt"
 
 	micro "micro/go-micro"
-	proto "github.com/micro/examples/service/proto"
+	proto "micro/examples/service/proto"
 	"golang.org/x/net/context"
 )
 
@@ -183,7 +183,7 @@ import (
 	"fmt"
 
 	micro "micro/go-micro"
-	proto "github.com/micro/examples/service/proto"
+	proto "micro/examples/service/proto"
 	"golang.org/x/net/context"
 )
 
@@ -229,7 +229,7 @@ A Function is a one time executing Service which exits after completing a reques
 package main
 
 import (
-	proto "github.com/micro/examples/function/proto"
+	proto "micro/examples/function/proto"
 	"micro/go-micro"
 	"golang.org/x/net/context"
 )

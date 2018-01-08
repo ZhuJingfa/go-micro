@@ -13,10 +13,10 @@ import (
 	"sync"
 	"time"
 
-	"github.com/micro/go-log"
-	maddr "github.com/micro/misc/lib/addr"
-	mnet "github.com/micro/misc/lib/net"
-	mls "github.com/micro/misc/lib/tls"
+	"micro/go-log"
+	maddr "micro/misc/lib/addr"
+	mnet "micro/misc/lib/net"
+	mls "micro/misc/lib/tls"
 )
 
 type buffer struct {

@@ -15,7 +15,7 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-	"github.com/micro/go-log"
+  "micro/go-log"
 	"golang.org/x/net/context"
 )
 

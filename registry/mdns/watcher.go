@@ -5,7 +5,7 @@ import (
 	"strings"
 
   "micro/go-micro/registry"
-	"github.com/micro/mdns"
+  "micro/mdns"
 )
 
 type mdnsWatcher struct {

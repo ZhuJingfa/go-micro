@@ -14,7 +14,7 @@ import (
 	"time"
 
   "micro/go-micro/registry"
-	"github.com/micro/mdns"
+  "micro/mdns"
 	hash "github.com/mitchellh/hashstructure"
 )
 

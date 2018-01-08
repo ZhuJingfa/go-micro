@@ -7,7 +7,7 @@ import (
 	"syscall"
 	"time"
 
-	log "github.com/micro/go-log"
+	log "micro/go-log"
 	"micro/go-micro/client"
 	"micro/go-micro/cmd"
 	"micro/go-micro/metadata"

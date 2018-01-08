@@ -3,7 +3,7 @@ package micro
 import (
 	"time"
 
-	"github.com/micro/cli"
+  "micro/cli"
   "micro/go-micro/broker"
   "micro/go-micro/client"
   "micro/go-micro/cmd"
