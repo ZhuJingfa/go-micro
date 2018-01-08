@@ -9,7 +9,7 @@ Example usage:
 
 	import (
 		"log"
-		"github.com/micro/go-micro/client"
+		"micro/go-micro/client"
 
 	)
 

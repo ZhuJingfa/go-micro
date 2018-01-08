@@ -3,7 +3,7 @@ package mock
 import (
 	"testing"
 
-	"github.com/micro/go-micro/transport"
+  "micro/go-micro/transport"
 )
 
 func TestTransport(t *testing.T) {

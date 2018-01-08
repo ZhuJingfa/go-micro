@@ -5,8 +5,8 @@ import (
 	"time"
 
 	"github.com/micro/go-log"
-	"github.com/micro/go-micro/registry"
-	"github.com/micro/go-micro/selector"
+  "micro/go-micro/registry"
+  "micro/go-micro/selector"
 )
 
 /*

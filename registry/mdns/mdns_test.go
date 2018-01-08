@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/micro/go-micro/registry"
+  "micro/go-micro/registry"
 )
 
 func TestMDNS(t *testing.T) {

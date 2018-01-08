@@ -3,8 +3,8 @@ package broker
 import (
 	"crypto/tls"
 
-	"github.com/micro/go-micro/broker/codec"
-	"github.com/micro/go-micro/registry"
+  "micro/go-micro/broker/codec"
+  "micro/go-micro/registry"
 	"golang.org/x/net/context"
 )
 
@@ -47,7 +47,7 @@ type SubscribeOption func(*SubscribeOptions)
 type contextKeyT string
 
 var (
-	registryKey = contextKeyT("github.com/micro/go-micro/registry")
+  registryKey = contextKeyT("micro/go-micro/registry")
 )
 
 func newSubscribeOptions(opts ...SubscribeOption) SubscribeOptions {

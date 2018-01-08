@@ -1,7 +1,7 @@
 package selector
 
 import (
-	"github.com/micro/go-micro/registry"
+  "micro/go-micro/registry"
 )
 
 type defaultSelector struct {

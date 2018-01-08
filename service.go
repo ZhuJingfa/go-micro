@@ -8,10 +8,10 @@ import (
 	"time"
 
 	log "github.com/micro/go-log"
-	"github.com/micro/go-micro/client"
-	"github.com/micro/go-micro/cmd"
-	"github.com/micro/go-micro/metadata"
-	"github.com/micro/go-micro/server"
+	"micro/go-micro/client"
+	"micro/go-micro/cmd"
+	"micro/go-micro/metadata"
+	"micro/go-micro/server"
 )
 
 type service struct {

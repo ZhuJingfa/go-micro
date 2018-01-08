@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/micro/go-micro/broker"
+  "micro/go-micro/broker"
 )
 
 func TestBroker(t *testing.T) {

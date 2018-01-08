@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"sync"
 
-	"github.com/micro/go-micro/client"
-	"github.com/micro/go-micro/errors"
+  "micro/go-micro/client"
+  "micro/go-micro/errors"
 
 	"golang.org/x/net/context"
 )

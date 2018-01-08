@@ -3,7 +3,7 @@ package micro
 import (
 	"time"
 
-	"github.com/micro/go-micro/server"
+  "micro/go-micro/server"
 	"golang.org/x/net/context"
 )
 

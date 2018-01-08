@@ -1,7 +1,7 @@
 package rpc
 
 import (
-	"github.com/micro/go-micro/client"
+  "micro/go-micro/client"
 )
 
 func NewClient(opts ...client.Option) client.Client {

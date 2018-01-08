@@ -3,11 +3,11 @@ package server
 import (
 	"time"
 
-	"github.com/micro/go-micro/broker"
-	"github.com/micro/go-micro/codec"
-	"github.com/micro/go-micro/registry"
-	"github.com/micro/go-micro/server/debug"
-	"github.com/micro/go-micro/transport"
+  "micro/go-micro/broker"
+  "micro/go-micro/codec"
+  "micro/go-micro/registry"
+  "micro/go-micro/server/debug"
+  "micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )

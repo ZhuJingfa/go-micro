@@ -10,11 +10,11 @@ import (
 	"time"
 
 	"github.com/micro/go-log"
-	"github.com/micro/go-micro/broker"
-	"github.com/micro/go-micro/codec"
-	"github.com/micro/go-micro/metadata"
-	"github.com/micro/go-micro/registry"
-	"github.com/micro/go-micro/transport"
+	"micro/go-micro/broker"
+	"micro/go-micro/codec"
+	"micro/go-micro/metadata"
+	"micro/go-micro/registry"
+	"micro/go-micro/transport"
 
 	"github.com/micro/misc/lib/addr"
 

@@ -3,7 +3,7 @@ package server
 import (
 	"reflect"
 
-	"github.com/micro/go-micro/registry"
+  "micro/go-micro/registry"
 )
 
 type rpcHandler struct {
