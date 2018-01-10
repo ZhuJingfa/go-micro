@@ -115,3 +115,7 @@ func extractSubValue(typ reflect.Type) *registry.Value {
 	}
 	return extractValue(reqType, 0)
 }
+
+func ExtractEndpoint(method reflect.Method) *registry.Endpoint {
+	return extractEndpoint(method)
+}
