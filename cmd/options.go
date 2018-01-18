@@ -1,7 +1,6 @@
 package cmd
 
 import (
-  "micro/go-micro/broker"
   "micro/go-micro/client"
   "micro/go-micro/registry"
   "micro/go-micro/selector"
@@ -18,14 +17,12 @@ type Options struct {
 	Version     string
 
 	// We need pointers to things so we can swap them out if needed.
-	Broker    *broker.Broker
 	Registry  *registry.Registry
 	Selector  *selector.Selector
 	Transport *transport.Transport
 	Client    *client.Client
 	Server    *server.Server
 
-	Brokers    map[string]func(...broker.Option) broker.Broker
 	Clients    map[string]func(...client.Option) client.Client
 	Registries map[string]func(...registry.Option) registry.Registry
 	Selectors  map[string]func(...selector.Option) selector.Selector
@@ -58,11 +55,6 @@ func Version(v string) Option {
 	}
 }
 
-func Broker(b *broker.Broker) Option {
-	return func(o *Options) {
-		o.Broker = b
-	}
-}
 
 func Selector(s *selector.Selector) Option {
 	return func(o *Options) {

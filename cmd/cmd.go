@@ -163,7 +163,6 @@ var (
 	// used for default selection as the fall back
 	defaultClient    = "rpc"
 	defaultServer    = "rpc"
-	defaultBroker    = "http"
 	defaultRegistry  = "consul"
 	defaultSelector  = "cache"
 	defaultTransport = "http"

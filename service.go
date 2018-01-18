@@ -68,7 +68,6 @@ func (s *service) Init(opts ...Option) {
 	s.once.Do(func() {
 		// Initialise the command flags, overriding new service
 		s.opts.Cmd.Init(
-			cmd.Broker(&s.opts.Broker),
 			cmd.Registry(&s.opts.Registry),
 			cmd.Transport(&s.opts.Transport),
 			cmd.Client(&s.opts.Client),

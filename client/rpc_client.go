@@ -1,12 +1,10 @@
 package client
 
 import (
-	"bytes"
 	"fmt"
 	"sync"
 	"time"
 
-  "micro/go-micro/broker"
   "micro/go-micro/codec"
   "micro/go-micro/errors"
   "micro/go-micro/metadata"
@@ -435,39 +433,6 @@ func (r *rpcClient) Stream(ctx context.Context, request Request, opts ...CallOpt
 	return nil, grr
 }
 
-func (r *rpcClient) Publish(ctx context.Context, p Publication, opts ...PublishOption) error {
-	md, ok := metadata.FromContext(ctx)
-	if !ok {
-		md = make(map[string]string)
-	}
-	md["Content-Type"] = p.ContentType()
-
-	// encode message body
-	cf, err := r.newCodec(p.ContentType())
-	if err != nil {
-		return errors.InternalServerError("go.micro.client", err.Error())
-	}
-	b := &buffer{bytes.NewBuffer(nil)}
-	if err := cf(b).Write(&codec.Message{Type: codec.Publication}, p.Message()); err != nil {
-		return errors.InternalServerError("go.micro.client", err.Error())
-	}
-	r.once.Do(func() {
-		r.opts.Broker.Connect()
-	})
-
-	return r.opts.Broker.Publish(p.Topic(), &broker.Message{
-		Header: md,
-		Body:   b.Bytes(),
-	})
-}
-
-func (r *rpcClient) NewPublication(topic string, message interface{}) Publication {
-	return newRpcPublication(topic, message, r.opts.ContentType)
-}
-
-func (r *rpcClient) NewProtoPublication(topic string, message interface{}) Publication {
-	return newRpcPublication(topic, message, "application/octet-stream")
-}
 func (r *rpcClient) NewRequest(service, method string, request interface{}, reqOpts ...RequestOption) Request {
 	return newRpcRequest(service, method, request, r.opts.ContentType, reqOpts...)
 }

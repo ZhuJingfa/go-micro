@@ -3,7 +3,6 @@ package client
 import (
 	"time"
 
-  "micro/go-micro/broker"
   "micro/go-micro/codec"
   "micro/go-micro/registry"
   "micro/go-micro/selector"
@@ -16,8 +15,6 @@ type Options struct {
 	// Used to select codec
 	ContentType string
 
-	// Plugged interfaces
-	Broker    broker.Broker
 	Codecs    map[string]codec.NewCodec
 	Registry  registry.Registry
 	Selector  selector.Selector
@@ -96,10 +93,6 @@ func newOptions(options ...Option) Options {
 		opts.ContentType = defaultContentType
 	}
 
-	if opts.Broker == nil {
-		opts.Broker = broker.DefaultBroker
-	}
-
 	if opts.Registry == nil {
 		opts.Registry = registry.DefaultRegistry
 	}
@@ -115,13 +108,6 @@ func newOptions(options ...Option) Options {
 	}
 
 	return opts
-}
-
-// Broker to be used for pub/sub
-func Broker(b broker.Broker) Option {
-	return func(o *Options) {
-		o.Broker = b
-	}
 }
 
 // Codec to be used to encode/decode requests for a given content type

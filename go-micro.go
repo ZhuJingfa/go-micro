@@ -64,14 +64,6 @@ func NewFunction(opts ...Option) Function {
 	return newFunction(opts...)
 }
 
-// NewPublisher returns a new Publisher
-func NewPublisher(topic string, c client.Client) Publisher {
-	if c == nil {
-		c = client.NewClient()
-	}
-	return &publisher{c, topic}
-}
-
 // RegisterHandler is syntactic sugar for registering a handler
 func RegisterHandler(s server.Server, h interface{}, opts ...server.HandlerOption) error {
 	return s.Handle(s.NewHandler(h, opts...))

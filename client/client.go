@@ -13,7 +13,6 @@ import (
 type Client interface {
 	Init(...Option) error
 	Options() Options
-	NewPublication(topic string, msg interface{}) Publication
 	NewRequest(service, method string, req interface{}, reqOpts ...RequestOption) Request
 	NewProtoRequest(service, method string, req interface{}, reqOpts ...RequestOption) Request
 	NewJsonRequest(service, method string, req interface{}, reqOpts ...RequestOption) Request
@@ -21,7 +20,6 @@ type Client interface {
 	CallRemote(ctx context.Context, addr string, req Request, rsp interface{}, opts ...CallOption) error
 	Stream(ctx context.Context, req Request, opts ...CallOption) (Streamer, error)
 	StreamRemote(ctx context.Context, addr string, req Request, opts ...CallOption) (Streamer, error)
-	Publish(ctx context.Context, p Publication, opts ...PublishOption) error
 	String() string
 }
 
@@ -102,20 +100,9 @@ func StreamRemote(ctx context.Context, address string, request Request, opts ...
 	return DefaultClient.StreamRemote(ctx, address, request, opts...)
 }
 
-// Publishes a publication using the default client. Using the underlying broker
-// set within the options.
-func Publish(ctx context.Context, p Publication) error {
-	return DefaultClient.Publish(ctx, p)
-}
-
 // Creates a new client with the options passed in
 func NewClient(opt ...Option) Client {
 	return newRpcClient(opt...)
-}
-
-// Creates a new publication using the default client
-func NewPublication(topic string, message interface{}) Publication {
-	return DefaultClient.NewPublication(topic, message)
 }
 
 // Creates a new request using the default client. Content Type will
