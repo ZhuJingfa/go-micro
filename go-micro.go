@@ -30,8 +30,6 @@ type Function interface {
 	Done() error
 	// Handle registers an RPC handler
 	Handle(v interface{}) error
-	// Subscribe registers a subscriber
-	Subscribe(topic string, v interface{}) error
 }
 
 // Publisher is syntactic sugar for publishing
@@ -77,9 +75,4 @@ func NewPublisher(topic string, c client.Client) Publisher {
 // RegisterHandler is syntactic sugar for registering a handler
 func RegisterHandler(s server.Server, h interface{}, opts ...server.HandlerOption) error {
 	return s.Handle(s.NewHandler(h, opts...))
-}
-
-// RegisterSubscriber is syntactic sugar for registering a subscriber
-func RegisterSubscriber(topic string, s server.Server, h interface{}, opts ...server.SubscriberOption) error {
-	return s.Subscribe(s.NewSubscriber(topic, h, opts...))
 }

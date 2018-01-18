@@ -16,19 +16,11 @@ type Server interface {
 	Init(...Option) error
 	Handle(Handler) error
 	NewHandler(interface{}, ...HandlerOption) Handler
-	NewSubscriber(string, interface{}, ...SubscriberOption) Subscriber
-	Subscribe(Subscriber) error
 	Register() error
 	Deregister() error
 	Start() error
 	Stop() error
 	String() string
-}
-
-type Publication interface {
-	Topic() string
-	Message() interface{}
-	ContentType() string
 }
 
 type Request interface {
@@ -85,12 +77,6 @@ func NewServer(opt ...Option) Server {
 	return newRpcServer(opt...)
 }
 
-// NewSubscriber creates a new subscriber interface with the given topic
-// and handler using the default server
-func NewSubscriber(topic string, h interface{}, opts ...SubscriberOption) Subscriber {
-	return DefaultServer.NewSubscriber(topic, h, opts...)
-}
-
 // NewHandler creates a new handler interface using the default server
 // Handlers are required to be a public object with public
 // methods. Call to a service method such as Foo.Bar expects
@@ -109,12 +95,6 @@ func NewHandler(h interface{}, opts ...HandlerOption) Handler {
 // handle inbound requests
 func Handle(h Handler) error {
 	return DefaultServer.Handle(h)
-}
-
-// Subscribe registers a subscriber interface with the default server
-// which subscribes to specified topic with the broker
-func Subscribe(s Subscriber) error {
-	return DefaultServer.Subscribe(s)
 }
 
 // Register registers the default server with the discovery system

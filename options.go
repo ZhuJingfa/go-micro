@@ -196,20 +196,6 @@ func WrapHandler(w ...server.HandlerWrapper) Option {
 	}
 }
 
-// WrapSubscriber adds a subscriber Wrapper to a list of options passed into the server
-func WrapSubscriber(w ...server.SubscriberWrapper) Option {
-	return func(o *Options) {
-		var wrappers []server.Option
-
-		for _, wrap := range w {
-			wrappers = append(wrappers, server.WrapSubscriber(wrap))
-		}
-
-		// Init once
-		o.Server.Init(wrappers...)
-	}
-}
-
 // Before and Afters
 
 func BeforeStart(fn func() error) Option {

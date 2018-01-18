@@ -24,7 +24,6 @@ type Options struct {
 	Id           string
 	Version      string
 	HdlrWrappers []HandlerWrapper
-	SubWrappers  []SubscriberWrapper
 
 	RegisterTTL time.Duration
 
@@ -179,12 +178,5 @@ func Wait(b bool) Option {
 func WrapHandler(w HandlerWrapper) Option {
 	return func(o *Options) {
 		o.HdlrWrappers = append(o.HdlrWrappers, w)
-	}
-}
-
-// Adds a subscriber Wrapper to a list of options passed into the server
-func WrapSubscriber(w SubscriberWrapper) Option {
-	return func(o *Options) {
-		o.SubWrappers = append(o.SubWrappers, w)
 	}
 }

@@ -94,13 +94,6 @@ func Server(s *server.Server) Option {
 	}
 }
 
-// New broker func
-func NewBroker(name string, b func(...broker.Option) broker.Broker) Option {
-	return func(o *Options) {
-		o.Brokers[name] = b
-	}
-}
-
 // New client func
 func NewClient(name string, b func(...client.Option) client.Client) Option {
 	return func(o *Options) {

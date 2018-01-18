@@ -21,15 +21,6 @@ func fnHandlerWrapper(f Function) server.HandlerWrapper {
 	}
 }
 
-func fnSubWrapper(f Function) server.SubscriberWrapper {
-	return func(s server.SubscriberFunc) server.SubscriberFunc {
-		return func(ctx context.Context, msg server.Publication) error {
-			defer f.Done()
-			return s(ctx, msg)
-		}
-	}
-}
-
 func newFunction(opts ...Option) Function {
 	ctx, cancel := context.WithCancel(context.Background())
 
@@ -57,7 +48,6 @@ func newFunction(opts ...Option) Function {
 		server.Wait(true),
 		// wrap handlers and subscribers to finish execution
 		server.WrapHandler(fnHandlerWrapper(fn)),
-		server.WrapSubscriber(fnSubWrapper(fn)),
 	)
 
 	return fn
@@ -71,11 +61,5 @@ func (f *function) Done() error {
 func (f *function) Handle(v interface{}) error {
 	return f.Service.Server().Handle(
 		f.Service.Server().NewHandler(v),
-	)
-}
-
-func (f *function) Subscribe(topic string, v interface{}) error {
-	return f.Service.Server().Subscribe(
-		f.Service.Server().NewSubscriber(topic, v),
 	)
 }
