@@ -10,21 +10,21 @@ import (
 	"time"
 
 	"micro/cli"
-  "micro/go-micro/client"
-  "micro/go-micro/server"
+	"micro/go-micro/client"
+	"micro/go-micro/server"
 
 	// registries
-  "micro/go-micro/registry"
-  "micro/go-micro/registry/consul"
-  "micro/go-micro/registry/mdns"
+	"micro/go-micro/registry"
+	"micro/go-micro/registry/consul"
+	"micro/go-micro/registry/mdns"
 
 	// selectors
-  "micro/go-micro/selector"
-  "micro/go-micro/selector/cache"
+	"micro/go-micro/selector"
+	"micro/go-micro/selector/cache"
 
 	// transports
-  "micro/go-micro/transport"
-  thttp "micro/go-micro/transport/http"
+	"micro/go-micro/transport"
+	thttp "micro/go-micro/transport/http"
 )
 
 type Cmd interface {

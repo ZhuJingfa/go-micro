@@ -4,8 +4,8 @@ import (
 	"crypto/tls"
 	"time"
 
-  "micro/go-micro/transport/codec"
 	"golang.org/x/net/context"
+	"micro/go-micro/transport/codec"
 )
 
 type Options struct {

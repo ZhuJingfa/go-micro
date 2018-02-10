@@ -1,11 +1,11 @@
 package cmd
 
 import (
-  "micro/go-micro/client"
-  "micro/go-micro/registry"
-  "micro/go-micro/selector"
-  "micro/go-micro/server"
-  "micro/go-micro/transport"
+	"micro/go-micro/client"
+	"micro/go-micro/registry"
+	"micro/go-micro/selector"
+	"micro/go-micro/server"
+	"micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )
@@ -54,7 +54,6 @@ func Version(v string) Option {
 		o.Version = v
 	}
 }
-
 
 func Selector(s *selector.Selector) Option {
 	return func(o *Options) {

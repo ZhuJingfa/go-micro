@@ -3,7 +3,7 @@ package mock
 import (
 	"errors"
 
-  "micro/go-micro/registry"
+	"micro/go-micro/registry"
 )
 
 type mockWatcher struct {

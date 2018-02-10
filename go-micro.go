@@ -2,8 +2,8 @@
 package micro
 
 import (
-  "micro/go-micro/client"
-  "micro/go-micro/server"
+	"micro/go-micro/client"
+	"micro/go-micro/server"
 
 	"golang.org/x/net/context"
 )

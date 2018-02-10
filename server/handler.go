@@ -1,7 +1,7 @@
 package server
 
 import (
-  "micro/go-micro/registry"
+	"micro/go-micro/registry"
 )
 
 // Handler interface represents a Service request handler. It's generated

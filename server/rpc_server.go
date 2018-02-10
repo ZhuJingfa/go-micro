@@ -25,8 +25,8 @@ type rpcServer struct {
 	exit chan chan error
 
 	sync.RWMutex
-	opts        Options
-	handlers    map[string]Handler
+	opts     Options
+	handlers map[string]Handler
 	// used for first registration
 	registered bool
 	// graceful exit
@@ -42,8 +42,8 @@ func newRpcServer(opts ...Option) Server {
 			serviceMap:   make(map[string]*service),
 			hdlrWrappers: options.HdlrWrappers,
 		},
-		handlers:    make(map[string]Handler),
-		exit:        make(chan chan error),
+		handlers: make(map[string]Handler),
+		exit:     make(chan chan error),
 	}
 }
 

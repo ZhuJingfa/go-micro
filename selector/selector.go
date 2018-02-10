@@ -3,7 +3,7 @@ package selector
 
 import (
 	"errors"
-  "micro/go-micro/registry"
+	"micro/go-micro/registry"
 )
 
 // Selector builds on the registry as a mechanism to pick nodes

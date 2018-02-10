@@ -3,10 +3,10 @@ package server
 import (
 	"time"
 
-  "micro/go-micro/codec"
-  "micro/go-micro/registry"
-  "micro/go-micro/server/debug"
-  "micro/go-micro/transport"
+	"micro/go-micro/codec"
+	"micro/go-micro/registry"
+	"micro/go-micro/server/debug"
+	"micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )

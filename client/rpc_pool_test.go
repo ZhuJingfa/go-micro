@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-  "micro/go-micro/transport"
-  "micro/go-micro/transport/mock"
+	"micro/go-micro/transport"
+	"micro/go-micro/transport/mock"
 )
 
 func testPool(t *testing.T, size int, ttl time.Duration) {

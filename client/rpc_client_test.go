@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"testing"
 
-  "micro/go-micro/registry"
-  "micro/go-micro/registry/mock"
-  "micro/go-micro/selector"
+	"micro/go-micro/registry"
+	"micro/go-micro/registry/mock"
+	"micro/go-micro/selector"
 
 	"golang.org/x/net/context"
 )

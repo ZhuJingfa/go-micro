@@ -3,8 +3,8 @@ package cache
 import (
 	"time"
 
-  "micro/go-micro/selector"
 	"golang.org/x/net/context"
+	"micro/go-micro/selector"
 )
 
 type ttlKey struct{}

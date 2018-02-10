@@ -3,7 +3,7 @@ package json
 import (
 	"encoding/json"
 
-  "micro/go-micro/transport/codec"
+	"micro/go-micro/transport/codec"
 )
 
 type jsonCodec struct{}

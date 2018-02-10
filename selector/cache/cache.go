@@ -4,9 +4,9 @@ import (
 	"sync"
 	"time"
 
-  "micro/go-log"
-  "micro/go-micro/registry"
-  "micro/go-micro/selector"
+	"micro/go-log"
+	"micro/go-micro/registry"
+	"micro/go-micro/selector"
 )
 
 /*

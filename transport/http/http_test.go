@@ -4,7 +4,7 @@ import (
 	"sync"
 	"testing"
 
-  "micro/go-micro/transport"
+	"micro/go-micro/transport"
 )
 
 func call(b *testing.B, c int) {

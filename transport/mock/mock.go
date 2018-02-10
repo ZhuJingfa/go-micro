@@ -8,7 +8,7 @@ import (
 	"sync"
 	"time"
 
-  "micro/go-micro/transport"
+	"micro/go-micro/transport"
 )
 
 type mockSocket struct {

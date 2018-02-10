@@ -6,9 +6,9 @@ import (
 	"os/signal"
 	"syscall"
 
-	"micro/go-log"
 	"github.com/pborman/uuid"
 	"golang.org/x/net/context"
+	"micro/go-log"
 )
 
 type Server interface {

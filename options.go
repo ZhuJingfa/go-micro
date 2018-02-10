@@ -3,13 +3,13 @@ package micro
 import (
 	"time"
 
-  "micro/cli"
-  "micro/go-micro/client"
-  "micro/go-micro/cmd"
-  "micro/go-micro/registry"
-  "micro/go-micro/selector"
-  "micro/go-micro/server"
-  "micro/go-micro/transport"
+	"micro/cli"
+	"micro/go-micro/client"
+	"micro/go-micro/cmd"
+	"micro/go-micro/registry"
+	"micro/go-micro/selector"
+	"micro/go-micro/server"
+	"micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )

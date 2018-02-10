@@ -5,11 +5,11 @@ import (
 	"sync"
 	"time"
 
-  "micro/go-micro/codec"
-  "micro/go-micro/errors"
-  "micro/go-micro/metadata"
-  "micro/go-micro/selector"
-  "micro/go-micro/transport"
+	"micro/go-micro/codec"
+	"micro/go-micro/errors"
+	"micro/go-micro/metadata"
+	"micro/go-micro/selector"
+	"micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )

@@ -13,9 +13,9 @@ import (
 	"sync"
 	"time"
 
-  "micro/go-micro/registry"
-  "micro/mdns"
 	hash "github.com/mitchellh/hashstructure"
+	"micro/go-micro/registry"
+	"micro/mdns"
 )
 
 type mdnsTxt struct {

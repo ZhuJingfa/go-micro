@@ -15,8 +15,8 @@ import (
 	"unicode"
 	"unicode/utf8"
 
-  "micro/go-log"
 	"golang.org/x/net/context"
+	"micro/go-log"
 )
 
 var (

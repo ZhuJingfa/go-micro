@@ -3,10 +3,10 @@ package client
 import (
 	"time"
 
-  "micro/go-micro/codec"
-  "micro/go-micro/registry"
-  "micro/go-micro/selector"
-  "micro/go-micro/transport"
+	"micro/go-micro/codec"
+	"micro/go-micro/registry"
+	"micro/go-micro/selector"
+	"micro/go-micro/transport"
 
 	"golang.org/x/net/context"
 )

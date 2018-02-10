@@ -1,7 +1,7 @@
 package selector
 
 import (
-  "micro/go-micro/registry"
+	"micro/go-micro/registry"
 )
 
 // FilterEndpoint is an endpoint based Select Filter which will

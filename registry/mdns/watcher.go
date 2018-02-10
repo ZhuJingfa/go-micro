@@ -4,8 +4,8 @@ import (
 	"errors"
 	"strings"
 
-  "micro/go-micro/registry"
-  "micro/mdns"
+	"micro/go-micro/registry"
+	"micro/mdns"
 )
 
 type mdnsWatcher struct {

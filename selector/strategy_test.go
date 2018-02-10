@@ -3,7 +3,7 @@ package selector
 import (
 	"testing"
 
-  "micro/go-micro/registry"
+	"micro/go-micro/registry"
 )
 
 func TestStrategies(t *testing.T) {

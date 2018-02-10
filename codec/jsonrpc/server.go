@@ -6,7 +6,7 @@ import (
 	"io"
 	"sync"
 
-  "micro/go-micro/codec"
+	"micro/go-micro/codec"
 )
 
 type serverCodec struct {
